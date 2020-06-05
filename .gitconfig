@@ -1,0 +1,18 @@
+[user]
+	name = Adam Braman
+	email = glyoko1@gmail.com
+	# signingkey = #### PUT ACTUAL KEY HERE
+[core]
+	excludesfile = ~/.gitignore_global
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	df = diff
+	st = status
+[commit]
+	gpgsign = true
+[gpg]
+	program = gpg
+[credential]
+	helper = osxkeychain
