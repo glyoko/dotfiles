@@ -96,6 +96,11 @@ export GOPATH="$HOME/code/go"
 export GOBIN="$GOPATH/bin"
 export PATH="$GOPATH/bin:$PATH"
 
+# helpful tool for finding biggest files in a directory
+# requires `brew install findutils`
+function find-biggest() {
+  gfind $1 -type f -printf '%s %p\n' | sort -nr | head -10
+}
 
 # record all bash history
 export HISTSIZE=
