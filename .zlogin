@@ -49,11 +49,11 @@ function m3u8 {
 export PATH="/usr/local/opt/srm/bin:$PATH"
 
 
-# bash-completion
-# [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion # This line outputted from brew install.
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-  . $(brew --prefix)/etc/bash_completion
-fi
+# # bash-completion
+# # [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion # This line outputted from brew install.
+# if [ -f $(brew --prefix)/etc/bash_completion ]; then
+#   . $(brew --prefix)/etc/bash_completion
+# fi
 
 
 # git-bash-prompt
