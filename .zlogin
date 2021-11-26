@@ -103,8 +103,7 @@ function find-biggest() {
 }
 
 # record all bash history
-export HISTSIZE=
-export HISTFILESIZE=
+export HISTSIZE=1000000
 
 
 # where I keep any custom bins
