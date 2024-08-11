@@ -91,6 +91,21 @@ eval "$(direnv hook bash)"
 export PATH="/usr/local/opt/node@10/bin:$PATH"
 
 
+# php setup
+# I had to do some real bs for my M1 with the capstone lib to get phpbrew to work:
+#
+# cd /opt/homebrew/Cellar/capstone/{$CAPSTONE_VERSION}/include/capstone
+# mkdir capstone
+# cp * capstone
+#
+# That's right. It's not looking at capstone/capstone.h
+# It's looking at capstone/capstone/capstone.h
+# fml
+source /Users/glyoko/.phpbrew/bashrc
+export PHPBREW_SET_PROMPT=1
+export PHPBREW_RC_ENABLE=1
+
+
 # go setup
 export GOPATH="$HOME/code/go"
 export GOBIN="$GOPATH/bin"
@@ -107,7 +122,7 @@ export HISTSIZE=1000000
 
 
 # where I keep any custom bins
-export PATH="~/.bin/:$PATH"
+export PATH="$HOME/.bin/:$PATH"
 
 
 # GPG stuff
