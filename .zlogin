@@ -82,6 +82,8 @@ export PATH="$HOME/.jenv/bin:$PATH"
 # elixir stuff
 test -s "$HOME/.kiex/scripts/kiex" && source "$HOME/.kiex/scripts/kiex"
 
+# pip/python stuff
+export PATH="$HOME/.local/bin:$PATH"
 
 # direnv setup
 eval "$(direnv hook bash)"
