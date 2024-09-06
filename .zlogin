@@ -41,14 +41,6 @@ function m3u8 {
     ffmpeg -i $1 -c copy -bsf:a aac_adtstoasc $2
 }
 
-
-# rvm
-[[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-export PATH="/usr/local/opt/srm/bin:$PATH"
-
-
 # # bash-completion
 # # [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion # This line outputted from brew install.
 # if [ -f $(brew --prefix)/etc/bash_completion ]; then
@@ -129,3 +121,11 @@ export PATH="$HOME/.bin/:$PATH"
 
 # GPG stuff
 export GPG_TTY=$(tty)
+
+
+# rvm
+[[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+export PATH="/usr/local/opt/srm/bin:$PATH"
+
