@@ -100,6 +100,10 @@ export PHPBREW_SET_PROMPT=1
 export PHPBREW_RC_ENABLE=1
 
 
+# C setup
+export CPATH=/opt/homebrew/include
+export LIBRARY_PATH=/opt/homebrew/lib
+
 # go setup
 export GOPATH="$HOME/code/go"
 export GOBIN="$GOPATH/bin"
