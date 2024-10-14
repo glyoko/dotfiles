@@ -78,7 +78,7 @@ test -s "$HOME/.kiex/scripts/kiex" && source "$HOME/.kiex/scripts/kiex"
 export PATH="$HOME/.local/bin:$PATH"
 
 # direnv setup
-eval "$(direnv hook bash)"
+eval "$(direnv hook zsh)"
 
 
 # npm bs
