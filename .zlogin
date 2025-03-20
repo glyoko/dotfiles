@@ -96,7 +96,7 @@ export PATH="/usr/local/opt/node@10/bin:$PATH"
 # That's right. It's not looking at capstone/capstone.h
 # It's looking at capstone/capstone/capstone.h
 # fml
-source /Users/glyoko/.phpbrew/bashrc
+# source /Users/glyoko/.phpbrew/bashrc
 export PHPBREW_SET_PROMPT=1
 export PHPBREW_RC_ENABLE=1
 
