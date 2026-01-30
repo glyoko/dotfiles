@@ -146,3 +146,16 @@ export NVM_DIR="$HOME/.nvm"
 # THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+# sops/ansible stuff
+sops-ansible() {
+    local sops_file="$1"
+    shift
+    sops exec-file --no-fifo "$sops_file" "ansible -i {} $(printf '%q ' "$@")"
+}
+
+sops-playbook() {
+    local sops_file="$1"
+    shift
+    sops exec-file --no-fifo "$sops_file" "ansible-playbook -i {} $(printf '%q ' "$@")"
+}
