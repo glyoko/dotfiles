@@ -4,7 +4,7 @@
 # aliases, useful functions
 alias ll="ls -la"
 alias f="fuck"
-alias code="open -a 'VSCodium'"
+alias code="open -a 'Cursor'"
 alias gl='git log --graph --pretty=format:'\''%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'\'' --abbrev-commit'
 function if_good {
   if ((! $?)) ; then eval "$@" ; fi
