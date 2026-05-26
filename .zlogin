@@ -147,6 +147,11 @@ export NVM_DIR="$HOME/.nvm"
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
+# quick command to find processes that are hogging connections. I needed this once because Cursor had 7000+ connections for some reason and exhausted my port pool...
+function check-timewait() {
+    netstat -anv | grep TIME_WAIT | awk '{print $11}' | cut -d: -f1 | sort | uniq -c | sort -rn | head -20
+}
+
 # sops/ansible stuff
 sops-ansible() {
     local sops_file="$1"
