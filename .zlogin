@@ -152,6 +152,9 @@ function check-timewait() {
     netstat -anv | grep TIME_WAIT | awk '{print $11}' | cut -d: -f1 | sort | uniq -c | sort -rn | head -20
 }
 
+# docker stuff
+export PATH="$HOME/.docker/bin:$PATH"
+
 # sops/ansible stuff
 sops-ansible() {
     local sops_file="$1"
